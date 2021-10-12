@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Baseapp2</string>
+    <string name="btn1_text">YJU Home Page</string>
+    <string name="btn2_text">Phone Call</string>
+    <string name="btn3_text">Photo</string>
+    <string name="btn4_text">Finish</string>
+
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<Button
+    android:id="@+id/baseBtn"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:layout_centerInParent="true"
+    android:layout_margin="1dp"
+    android:text="Base">
+</Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/baseBtn"
+        android:layout_toLeftOf="@id/baseBtn"
+        android:layout_margin="1dp"
+        android:text="No.1">
+    </Button>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/baseBtn"
+        android:layout_toLeftOf="@id/baseBtn"
+        android:layout_margin="1dp"
+        android:text="No.2">
+    </Button>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/baseBtn"
+        android:layout_toLeftOf="@id/baseBtn"
+        android:layout_margin="1dp"
+        android:text="No.3">
+    </Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/baseBtn"
+        android:layout_above="@id/baseBtn"
+        android:text="No.4">
+    </Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/baseBtn"
+        android:layout_below="@id/baseBtn"
+        android:text="No.5">
+    </Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/baseBtn"
+        android:layout_toRightOf="@id/baseBtn"
+        android:text="No.6">
+    </Button>
+</RelativeLayout>

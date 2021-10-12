@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">global</string>
+    <string name="str_key_a" >Show Me The Money!!!!!!"</string>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="여기는 서랍 밖입니다."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    슬라이딩드로워의 id 와 나올 텍스트뷰의 id 가 같아야지 슬라이딩 드로우가 조작됨.    -->
+
+    <SlidingDrawer
+        android:content="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:handle="@+id/handle">
+
+        <Button
+            android:id="@+id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서랍 손잡이"/>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#A100ff00">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="여기는 서랍 안입니다."/>
+
+            <SlidingDrawer
+                android:content="@id/content2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:handle="@id/handle2">
+
+                <Button
+                    android:id="@+id/handle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="안 서랍 손잡이" />
+
+            <LinearLayout
+                android:id="@+id/content2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#A10000ff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="여기는 두번째 서랍 안입니다."/>
+
+                </LinearLayout>
+
+             </SlidingDrawer>
+
+        </LinearLayout>
+
+    </SlidingDrawer>
+
+</LinearLayout>
