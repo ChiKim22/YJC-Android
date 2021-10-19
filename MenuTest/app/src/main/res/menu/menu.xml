@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--  그룹으로 묶어주고 chackableBehavior=single 옵션을 주면, 라디오버튼처럼 하나만 선택 가능하게 해준  -->
+    <group
+        android:checkableBehavior="single">
+
+    <item
+        android:id="@+id/itemRed"
+        android:title="to Red"/>
+    <item
+        android:id="@+id/itemGreen"
+        android:title="to Green"/>
+    <item
+        android:id="@+id/itemBlue"
+        android:title="to Blue"/>
+
+    </group>
+
+<!--  subMenu  -->
+    <item android:title="Btn Change >> ">
+        <menu>
+            <item
+                android:id="@+id/subRotate"
+                android:title="45도 회전"/>
+            <item
+                android:id="@+id/subSize"
+                android:title="2x Zoom"/>
+        </menu>
+    </item>
+
+</menu>
