@@ -50,18 +50,18 @@ public class MainActivity extends AppCompatActivity {
                 baseLayout.setBackgroundColor(Color.BLUE);
                 return true;
             case R.id.subRotate:
-                baseLayout.setRotation(45);
+                btn1.setRotation(45);
                 return true;
             case R.id.subSize:
-                baseLayout.setScaleX(1.5f);
-                baseLayout.setScaleY(1.5f);
+                btn1.setScaleX(1.5f);
+                btn1.setScaleY(1.5f);
                 return true;
             case R.id.backRotate:
-                baseLayout.setRotation(0);
+                btn1.setRotation(0);
                 return true;
             case R.id.normalScale:
-                baseLayout.setScaleX(1.0f);
-                baseLayout.setScaleY(1.0f);
+                btn1.setScaleX(1.0f);
+                btn1.setScaleY(1.0f);
                 return true;
         }
         return false;
