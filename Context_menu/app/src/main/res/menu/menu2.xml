@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <item
+                android:id="@+id/subRotate"
+                android:title="45도 회전"/>
+            <item
+                android:id="@+id/subSize"
+                android:title="2x Zoom"/>
+            <item
+                android:id="@+id/backRotate"
+                android:title="원래 각도로"/>
+            <item
+                android:id="@+id/normalScale"
+                android:title="원래 크기로"/>
+
+</menu>
