@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
+        // Inflate 별개의 xml 파일을 나타나게 해줌.
         MenuInflater mInflater = getMenuInflater();
         mInflater.inflate(R.menu.menu, menu);
         return true;
