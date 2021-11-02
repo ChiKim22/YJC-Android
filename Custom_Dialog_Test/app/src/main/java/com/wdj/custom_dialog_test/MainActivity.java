@@ -14,9 +14,8 @@ import android.widget.ViewFlipper;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvName, tvEmail;
     Button btn1;
-    EditText edName, edEmail;
+    EditText mainName, mainEmail, edName, edEmail;
     TextView tvToast;
     View dialogView, toastView;
 
@@ -25,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tvName = (TextView) findViewById(R.id.tvName);
-        tvEmail = (TextView) findViewById(R.id.tvEmail);
+        mainName = (EditText) findViewById(R.id.mainName);
+        mainEmail = (EditText) findViewById(R.id.mainEmail);
 
         btn1 = (Button) findViewById(R.id.btnDialog);
 
@@ -38,14 +37,17 @@ public class MainActivity extends AppCompatActivity {
                 dig.setTitle("User Infomation");
                 dig.setIcon(R.drawable.ic_menu_allfriends);
                 dig.setView(dialogView);
+
+                edName = (EditText) dialogView.findViewById(R.id.edName);
+                edEmail = (EditText) dialogView.findViewById(R.id.edEmail);
+                edName.setText(mainName.getText().toString());
+                edEmail.setText(mainEmail.getText().toString());
+
                 dig.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        edName = (EditText) dialogView.findViewById(R.id.edName);
-                        edEmail = (EditText) dialogView.findViewById(R.id.edEmail);
-
-                        tvName.setText(edName.getText().toString());
-                        tvEmail.setText(edEmail.getText().toString());
+                        mainName.setText(edName.getText().toString());
+                        mainEmail.setText(edEmail.getText().toString());
                     }
                 });
                 dig.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
