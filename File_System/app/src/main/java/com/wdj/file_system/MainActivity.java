@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                                         Toast.LENGTH_SHORT).show();
 
                 }catch (IOException e){
-
+                    e.printStackTrace();
                 }
             }
         });
