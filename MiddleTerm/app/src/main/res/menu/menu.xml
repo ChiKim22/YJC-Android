@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Rotate"
+        android:title="그림 회전"/>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/dog"
+            android:title="강아지"/>
+
+         <item
+            android:id="@+id/cat"
+            android:title="고양이"/>
+
+         <item
+            android:id="@+id/rabbit"
+            android:title="토끼"/>
+    </group>
+
+</menu>
