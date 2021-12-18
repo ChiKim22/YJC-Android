@@ -1,5 +1,6 @@
 package com.wdj.personal_project;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -9,6 +10,11 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.ContextMenu;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -19,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     ImageButton searchBtn, callBtn, msgBtn, mapBtn, camBtn;
     EditText search;
     ConstraintLayout background;
-    int bgImg[] = {R.drawable.dora1, R.drawable.dora2};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         search = (EditText) findViewById(R.id.edSearch);
+        registerForContextMenu(background);
 
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,13 +94,53 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        background.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                    background.setBackgroundResource(bgImg[1]);
-                return false;
-            }
-        });
+
+//        background.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//
+//                if(v.isEnabled() == false){
+//                    background.setBackgroundColor(Color.WHITE);
+//                    return true;
+//                }
+//
+//                return false;
+//            }
+//        });
 
     }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+//        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu, menu);
+    }
+
+    public boolean onContextItemSelected(MenuItem item)
+    {
+        switch(item.getItemId())
+        {
+            case R.id.dark:
+                background.setBackgroundColor(Color.BLACK);
+                search.setBackgroundColor(Color.WHITE);
+                searchBtn.setBackgroundColor(Color.WHITE);
+                Toast.makeText(getApplicationContext(), "Dark mode on.", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.light:
+                background.setBackgroundColor(Color.WHITE);
+                search.setBackgroundColor(Color.WHITE);
+                searchBtn.setBackgroundColor(Color.WHITE);
+                Toast.makeText(getApplicationContext(), "Dark mode off.", Toast.LENGTH_SHORT).show();
+                return true;
+        }
+
+        return super.onContextItemSelected(item);
+    }
+
+
+    //    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        return false; // 앱 꺼짐 비활성화.
+//    }
 }
