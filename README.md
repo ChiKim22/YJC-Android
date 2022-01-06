@@ -1,3 +1,3 @@
-# YJC_Android
+# Develope from Android Studio
 
-Android Class on 2021 2nd
+Android Studio Code
