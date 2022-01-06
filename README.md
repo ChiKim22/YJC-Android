@@ -1,3 +1,3 @@
-# Develope from Android Studio
+# Develop from Android Studio
 
 Android Studio Code
